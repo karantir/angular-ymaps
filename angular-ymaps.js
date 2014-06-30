@@ -119,7 +119,8 @@ angular.module('ymaps', [])
         self.map = new ymaps.Map($element[0], {
             center   : $scope.center || [0, 0],
             zoom     : $scope.zoom || 0,
-            behaviors: config.mapBehaviors
+            behaviors: config.mapBehaviors,
+            controls: config.mapControls
         });
         $scope.markers = new ymaps.GeoObjectCollection({}, config.markerOptions);
         self.map.geoObjects.add($scope.markers);
